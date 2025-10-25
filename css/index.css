@@ -1,0 +1,25 @@
+/* CSS file for index.html page */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #b7c8d9;
+    display: flex;
+    justify-content: center;
+}
+
+ul li a {
+    display: block;
+    color: #0c2232;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+    background-color: #d1e2f3;
+}
+
+ul li a.active {
+    color: #b7c8d9;
+    background-color: #0c2232;
+}
