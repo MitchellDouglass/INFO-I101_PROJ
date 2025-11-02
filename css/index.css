@@ -23,3 +23,65 @@ ul li a.active {
     color: #b7c8d9;
     background-color: #0c2232;
 }
+
+/* Define global font */
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Arial;
+    color: #ffffff;
+}
+
+.masterBg {
+    background-image: url("../assets/cloud-bg.jpg"); /* This path must be in relation to the CSS file NOT the HTML file! */
+    background-position: center;
+    background-size: cover;
+    height: 50em;
+}
+
+.headForm {
+    font-weight: bold;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.subBox {
+    background: rgba(217, 217, 217, 0.4); /* Use a RGBA value to set the opacity WITHOUT affecting the contents inside */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#boxA {
+    width: 500px;
+    height: 250px;
+}
+
+#boxB {
+    width: 350px;
+    height: 250px;
+}
+
+.spacer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+a:link {
+    color: #0c2232;
+}
+
+a:visited {
+    color: #0c2232;
+}
+
+a:hover {
+    color: #d1e2f3;
+}
