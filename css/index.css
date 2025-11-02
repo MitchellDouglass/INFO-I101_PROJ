@@ -30,6 +30,19 @@ h1, h2, h3, h4, h5, h6, p {
     color: #ffffff;
 }
 
+/* define link setup */
+a:link {
+    color: #0c2232;
+}
+
+a:visited {
+    color: #0c2232;
+}
+
+a:hover {
+    color: #d1e2f3;
+}
+
 .masterBg {
     background-image: url("../assets/cloud-bg.jpg"); /* This path must be in relation to the CSS file NOT the HTML file! */
     background-position: center;
@@ -72,16 +85,4 @@ h1, h2, h3, h4, h5, h6, p {
 .spacer {
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-a:link {
-    color: #0c2232;
-}
-
-a:visited {
-    color: #0c2232;
-}
-
-a:hover {
-    color: #d1e2f3;
 }
