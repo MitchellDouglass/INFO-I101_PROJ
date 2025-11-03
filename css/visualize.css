@@ -17,6 +17,7 @@ ul li a {
 
 ul li a:hover:not(.active) {
     background-color: #d1e2f3;
+    color: #0c2232; /* keeps navbar text dark instead of changing to the global hover color */
 }
 
 ul li a.active {
