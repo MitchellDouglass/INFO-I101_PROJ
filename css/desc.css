@@ -28,3 +28,31 @@ ul li a.active {
 h1, h2, h3, h4, h5, h6, p {
     font-family: Arial;
 }
+
+/* instead of manually applying this everywhere */
+p {
+    text-align: center;
+}
+
+.headForm {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.logoLeft {
+    padding: 15px;
+    float: left;
+}
+
+.logoRight {
+    padding: 15px;
+    float: right;
+}
+
+.spacer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

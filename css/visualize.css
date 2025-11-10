@@ -28,3 +28,24 @@ ul li a.active {
 h1, h2, h3, h4, h5, h6, p {
     font-family: Arial;
 }
+
+.spacer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.subBox {
+    background: #b7c8d9;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#boxVis {
+    width: 725px;
+    height: 600px;
+}
+
+#boxSettings {
+    width: 275px;
+    height: 225px;
+}
