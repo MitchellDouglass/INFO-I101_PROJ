@@ -35,3 +35,20 @@ h1, h2, h3, h4, h5, h6, p {
     background-size: cover;
     height: 50em;
 }
+
+.backColor {
+	background-color: whitesmoke;
+}
+
+h4 {
+	padding-top: 20px;
+}
+
+p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+img {
+	padding: 20px;
+}
