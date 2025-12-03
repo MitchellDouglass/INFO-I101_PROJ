@@ -68,9 +68,13 @@ a:hover {
 }
 
 .subBox {
-    background: rgba(217, 217, 217, 0.4); /* Use a RGBA value to set the opacity WITHOUT affecting the contents inside */
+    background: rgba(217, 217, 217, 0.6); /* Use a RGBA value to set the opacity WITHOUT affecting the contents inside */
     padding: 30px;
     border-radius: 20px;
+}
+
+.boxFont {
+    color: #000000;
 }
 
 #boxA {
