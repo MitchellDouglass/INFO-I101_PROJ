@@ -45,6 +45,38 @@ h1, h2, h3, h4, h5, h6, p {
     padding-bottom: 20px;
 }
 
+.bigSpacer {
+    padding-top: 200px;
+}
+
+.subBox {
+    background: rgba(217, 217, 217, 0.4); /* Use a RGBA value to set the opacity WITHOUT affecting the contents inside */
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #0c2232;
+}
+
+.footerTxt {
+    color: #ffffff;
+}
+
+#boxSettings {
+    width: 300px;
+}
+
+/* define link setup */
+a:link {
+    color: #0c2232;
+}
+
+a:visited {
+    color: #0c2232;
+}
+
+a:hover {
+    color: #d1e2f3;
+}
+
 h4 {
 	padding-top: 20px;
 }
