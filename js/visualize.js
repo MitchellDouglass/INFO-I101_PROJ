@@ -1,28 +1,42 @@
 // js file for visualizer
 
-// we are only using countyData temporarily (testing purpose)
-// TODO: move to JSON storage for data
-const countyData = {
-    "marion": 8,
-    "hancock": 6,
-    "hamilton": 12,
-    "boone": 4,
-    "johnson": 9
-};
+// instantiate
+let countyData = {};
 
-// main function to add data for the specific county
-function addData(countyId) {
-    // this check prevents showing "XYZ County: undefined" to user (will just do nothing)
-    if (countyData[countyId] !== undefined) {
-        // capitalize the first letter of the countyId
-        // data provided in lowercase
-        const displayName = countyId.charAt(0).toUpperCase() + countyId.slice(1);
+// load county data from JSON file
+// run async
+// TODO : Allow user to select year of data
+// TODO : support multiple warning types
+async function loadCountyData() {
+    try {
+        // open file
+        const load = await fetch('../data/counties.json');
         
-        // use a template for this to make it a bit less ugly
-        const message = `<br> ${displayName} County: ${countyData[countyId]}`;
+        // load data
+        countyData = await load.json();
         
-        document.getElementById("hoverData").innerHTML = message;
+        //logging for my sake
+        // TODO: remove logging before final
+        console.log("worked! ", countyData);
+    } catch (error) {
+        console.error("something blew up: ", error);
     }
+}
+
+// run immediately
+loadCountyData();
+
+function addData(countyId) {
+    // if countyData[countyId] exists we will use it 
+    // if it returns undefined (not present in JSON file) we will set it to 0
+    // so user knows there is no warnings and not just leave it blank
+    const count = countyData[countyId] || 0; 
+
+    // format name to look nice to the user
+    const displayName = countyId.charAt(0).toUpperCase() + countyId.slice(1);
+
+    // update the element
+    document.getElementById("hoverData").innerHTML = `<br> ${displayName} County: ${count}`;
 }
 
 // clear when user hovers off
