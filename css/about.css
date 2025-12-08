@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .backColor {
-	background-color: whitesmoke;
+	background: rgba(217, 217, 217, 0.4);
+	border-radius: 20%;
 }
 
 .spacer {
@@ -88,4 +89,11 @@ p {
 
 img {
 	padding: 20px;
+}
+
+#whiteText {
+	color: aliceblue;
+	text-decoration: underline;
+	padding-top: 20px;
+	font-size: 18px; 
 }
