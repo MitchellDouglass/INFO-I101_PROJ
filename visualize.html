@@ -8,75 +8,93 @@
 </head>
 	
 <body>
-	<ul>
-        <li> <a href="index.html">Home</a> </li>
-        <li> <a class="active" href="visualize.html">Map</a> </li>
-        <li> <a href="desc.html">Description</a> </li>
-        <li> <a href="about.html">About Us</a> </li>
-    </ul>
+    <div class="masterBg">
+	    <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a class="active" href="visualize.html">Map</a> </li>
+            <li> <a href="desc.html">Description</a> </li>
+            <li> <a href="about.html">About Us</a> </li>
+        </ul>
+        
+        <div class="spacer"></div>
     
-    <div class="spacer"></div>
-
-    <div class="container">
-        <!-- center all the content horizontally but still allow some space -->
-        <div class="row justify-content-around">
-            <!-- force this box into the center vertically -->
-            <div class="col-4 align-self-center subBox" id="boxSettings">
-                <p>settings go in this box</p>
-
-                <p id="hoverData"></p>
+        <div class="container">
+            <!-- center all the content horizontally but still allow some space -->
+            <div class="row justify-content-around">
+                <!-- force this box into the center vertically -->
+                <div class="col-4 align-self-center subBox" id="boxSettings">
+                    <p>settings go in this box</p>
+                
+                    <!-- form selector for year -->
+                    <label for="year-select" class="form-label">Select Year:</label>
+                    <select id="year-select" class="form-select mb-3">
+                        <option value="2025" selected>2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                
+                    <!-- form selector for warning type -->
+                    <label for="type-select" class="form-label">Warning Type:</label>
+                    <select id="type-select" class="form-select mb-3">
+                        <option value="tor" selected>Tornado</option>
+                        <option value="svr">Severe Thunderstorm</option>
+                        <option value="ffw">Flash Flood</option>
+                    </select>
+                
+                    <p id="hoverData"></p>
+                </div>
+            
+                <div class="col-8 subBox" id="boxVis">
+                    <img src="assets/ind_map.png" width="650px" height="650px" usemap="#master_map">
+                    <map name="master_map">
+                        <!-- left to right organizational structure -->
+                        <area shape="poly" coords="60,84,152,84,151,112,120,128,95,155,79,167,85,177,68,177,67,172,59,172" id="warren" class="county-shape" href="#">
+                        <area shape="poly" coords="152,59,236,59,236,153,153,153" id="tippecanoe" class="county-shape" href="#">
+                        <area shape="poly" coords="225,11,271,11,272,22,304,24,305,93,238,93,237,58,221,58,220,31,228,25,223,21,226,15" id="carroll" class="county-shape" href="#">
+                        <area shape="poly" coords="306,58,414,58,414,101,334,101,333,110,327,110,326,106,320,106,320,94,306,93" id="howard" class="county-shape" href="#">
+                        <area shape="poly" coords="415,110,475,110,475,228,415,228" id="madison" class="county-shape" href="#">
+                        <area shape="poly" coords="447,110,551,110,553,192,477,191" id="delaware" class="county-shape" href="#">
+                        <area shape="poly" coords="553,130,642,129,639,211,555,210" id="randolph" class="county-shape" href="#">
+                        <area shape="poly" coords="59,174,66,174,66,179,84,179,80,200,78,224,81,228,78,233,83,237,94,248,89,260,89,304,89,322,59,322" id="vermillion" class="county-shape" href="#">
+                        <area shape="poly" coords="78,168,97,155,120,130,152,114,152,227,83,227,79,223,81,203,84,176" id="fountain" class="county-shape" href="#">
+                        <area shape="poly" coords="153,155,237,155,237,250,153,249" id="montgomery" class="county-shape" href="#">
+                        <area shape="poly" coords="237,95,318,96,319,106,325,107,325,110,333,112,333,164,237,163" id="clinton" class="county-shape" href="#">
+                        <area shape="poly" coords="237,165,333,166,334,233,237,234" id="boone" class="county-shape" href="#">
+                        <area shape="poly" coords="334,103,413,102,413,152,335,153" id="tipton" class="county-shape" href="#">
+                        <area shape="poly" coords="334,155,414,155,415,233,334,233" id="hamilton" class="county-shape" href="#">
+                        <area shape="poly" coords="82,227,151,229,151,250,168,252,168,321,92,320,88,310,92,276,90,259,95,254,92,240,84,237,87,234" id="parke" class="county-shape" href="#">
+                        <area shape="poly" coords="170,252,237,252,237,317,246,317,244,331,244,336,238,346,238,358,170,356" id="putnam" class="county-shape" href="#">
+                        <area shape="poly" coords="237,235,315,236,316,313,285,315,285,322,247,322,249,316,240,315,240,251,238,250" id="hendricks" class="county-shape" href="#">
+                        <area shape="poly" coords="317,235,397,234,398,249,395,249,395,311,316,314" id="marion" class="county-shape" href="#">
+                        <area shape="poly" coords="401,236,415,235,417,231,475,230,477,247,471,248,470,271,463,271,462,295,397,296,396,251,400,251" id="hancock" class="county-shape" href="#">
+                        <area shape="poly" coords="477,194,553,194,553,212,555,214,555,246,550,246,551,270,473,271,473,251,477,249" id="henry" class="county-shape" href="#">
+                        <area shape="poly" coords="59,323,128,323,128,344,120,344,118,416,44,415,46,398,59,393" id="vigo" class="county-shape" href="#">
+                        <area shape="poly" coords="131,324,168,325,167,359,183,360,183,393,159,393,159,441,121,441,121,346,131,346" id="clay" class="county-shape" href="#">
+                        <area shape="poly" coords="186,360,250,361,250,393,246,390,244,396,238,395,238,441,161,441,161,396,185,395" id="owen" class="county-shape" href="#">
+                        <area shape="poly" coords="247,325,287,325,288,317,333,316,331,393,253,393,252,358,240,358,240,346,248,335,245,332" id="morgan" class="county-shape" href="#">
+                        <area shape="poly" coords="333,317,394,316,394,392,333,393" id="johnson" class="county-shape" href="#">
+                        <area shape="poly" coords="398,299,463,299,463,390,398,391" id="shelby" class="county-shape" href="#">
+                        <area shape="poly" coords="466,274,533,274,534,364,466,363" id="rush" class="county-shape" href="#">
+                        <area shape="poly" coords="50,419,119,419,120,514,61,513,63,500,49,489,51,472,32,450,51,430" id="sullivan" class="county-shape" href="#">
+                        <area shape="poly" coords="121,443,236,445,238,512,122,512" id="greene" class="county-shape" href="#">
+                        <area shape="poly" coords="240,398,245,398,246,392,251,397,301,397,303,419,305,421,305,476,316,476,315,488,242,488" id="monroe" class="county-shape" href="#">
+                        <area shape="poly" coords="306,396,366,395,367,473,308,473,307,420,306,418" id="brown" class="county-shape" href="#">
+                        <area shape="poly" coords="370,396,452,395,450,450,427,451,427,468,420,470,413,476,370,476" id="bartholomew" class="county-shape" href="#">
+                        <area shape="poly" coords="466,366,534,366,535,414,480,451,453,450,455,394,466,394" id="decatur" class="county-shape" href="#">
+                        <area shape="poly" coords="59,516,119,516,122,514,144,515,144,521,141,524,140,531,133,528,133,532,124,537,119,537,119,546,115,549,118,557,111,570,119,585,120,612,109,618,95,610,69,615,65,622,56,616,54,623,46,622,43,635,32,634,14,645,12,631,35,621,30,611,42,599,40,588,45,579,61,574,67,546,60,537,56,526" id="knox" class="county-shape" href="#"> <!-- this is the worst thing ever -->
+                        <area shape="poly" coords="153,516,191,516,192,537,186,537,187,621,184,624,163,619,159,621,148,611,141,616,134,609,128,608,125,612,121,610,122,581,115,571,122,557,122,540,139,532" id="daviess" class="county-shape" href="#">
+                        <area shape="poly" coords="194,515,238,516,238,614,206,615,197,623,190,622,190,539,194,538" id="martin" class="county-shape" href="#">
+                        <area shape="poly" coords="241,491,325,492,325,550,323,558,318,558,319,570,241,571" id="lawrence" class="county-shape" href="#">
+                        <area shape="poly" coords="319,476,367,475,367,479,416,477,420,472,426,470,428,540,412,560,407,554,377,552,365,546,358,551,347,546,334,549,327,549,326,489,318,489" id="jackson" class="county-shape" href="#">
+                        <area shape="poly" coords="430,454,480,453,503,437,502,510,483,511,484,518,476,517,475,526,468,526,468,534,453,534,451,537,443,532,430,538" id="jennings" class="county-shape" href="#">
+                        <!-- that was a lot of typing-->
+                    </map>
+                
+                    <script src="js/visualize.js"></script>
+                </div>
             </div>
-
-            <div class="col-8 subBox" id="boxVis">
-                <img src="assets/ind_map.png" width="650px" height="650px" usemap="#master_map">
-                <map name="master_map">
-                    <!-- left to right organizational structure -->
-                    <area shape="poly" coords="60,84,152,84,151,112,120,128,95,155,79,167,85,177,68,177,67,172,59,172" id="warren" class="county-shape" href="#">
-                    <area shape="poly" coords="152,59,236,59,236,153,153,153" id="tippecanoe" class="county-shape" href="#">
-                    <area shape="poly" coords="225,11,271,11,272,22,304,24,305,93,238,93,237,58,221,58,220,31,228,25,223,21,226,15" id="carroll" class="county-shape" href="#">
-                    <area shape="poly" coords="306,58,414,58,414,101,334,101,333,110,327,110,326,106,320,106,320,94,306,93" id="howard" class="county-shape" href="#">
-                    <area shape="poly" coords="415,110,475,110,475,228,415,228" id="madison" class="county-shape" href="#">
-                    <area shape="poly" coords="447,110,551,110,553,192,477,191" id="delaware" class="county-shape" href="#">
-                    <area shape="poly" coords="553,130,642,129,639,211,555,210" id="randolph" class="county-shape" href="#">
-                    <area shape="poly" coords="59,174,66,174,66,179,84,179,80,200,78,224,81,228,78,233,83,237,94,248,89,260,89,304,89,322,59,322" id="vermillion" class="county-shape" href="#">
-                    <area shape="poly" coords="78,168,97,155,120,130,152,114,152,227,83,227,79,223,81,203,84,176" id="fountain" class="county-shape" href="#">
-                    <area shape="poly" coords="153,155,237,155,237,250,153,249" id="montgomery" class="county-shape" href="#">
-                    <area shape="poly" coords="237,95,318,96,319,106,325,107,325,110,333,112,333,164,237,163" id="clinton" class="county-shape" href="#">
-                    <area shape="poly" coords="237,165,333,166,334,233,237,234" id="boone" class="county-shape" href="#">
-                    <area shape="poly" coords="334,103,413,102,413,152,335,153" id="tipton" class="county-shape" href="#">
-                    <area shape="poly" coords="334,155,414,155,415,233,334,233" id="hamilton" class="county-shape" href="#">
-                    <area shape="poly" coords="82,227,151,229,151,250,168,252,168,321,92,320,88,310,92,276,90,259,95,254,92,240,84,237,87,234" id="parke" class="county-shape" href="#">
-                    <area shape="poly" coords="170,252,237,252,237,317,246,317,244,331,244,336,238,346,238,358,170,356" id="putnam" class="county-shape" href="#">
-                    <area shape="poly" coords="237,235,315,236,316,313,285,315,285,322,247,322,249,316,240,315,240,251,238,250" id="hendricks" class="county-shape" href="#">
-                    <area shape="poly" coords="317,235,397,234,398,249,395,249,395,311,316,314" id="marion" class="county-shape" href="#">
-                    <area shape="poly" coords="401,236,415,235,417,231,475,230,477,247,471,248,470,271,463,271,462,295,397,296,396,251,400,251" id="hancock" class="county-shape" href="#">
-                    <area shape="poly" coords="477,194,553,194,553,212,555,214,555,246,550,246,551,270,473,271,473,251,477,249" id="henry" class="county-shape" href="#">
-                    <area shape="poly" coords="59,323,128,323,128,344,120,344,118,416,44,415,46,398,59,393" id="vigo" class="county-shape" href="#">
-                    <area shape="poly" coords="131,324,168,325,167,359,183,360,183,393,159,393,159,441,121,441,121,346,131,346" id="clay" class="county-shape" href="#">
-                    <area shape="poly" coords="186,360,250,361,250,393,246,390,244,396,238,395,238,441,161,441,161,396,185,395" id="owen" class="county-shape" href="#">
-                    <area shape="poly" coords="247,325,287,325,288,317,333,316,331,393,253,393,252,358,240,358,240,346,248,335,245,332" id="morgan" class="county-shape" href="#">
-                    <area shape="poly" coords="333,317,394,316,394,392,333,393" id="johnson" class="county-shape" href="#">
-                    <area shape="poly" coords="398,299,463,299,463,390,398,391" id="shelby" class="county-shape" href="#">
-                    <area shape="poly" coords="466,274,533,274,534,364,466,363" id="rush" class="county-shape" href="#">
-                    <area shape="poly" coords="50,419,119,419,120,514,61,513,63,500,49,489,51,472,32,450,51,430" id="sullivan" class="county-shape" href="#">
-                    <area shape="poly" coords="121,443,236,445,238,512,122,512" id="greene" class="county-shape" href="#">
-                    <area shape="poly" coords="240,398,245,398,246,392,251,397,301,397,303,419,305,421,305,476,316,476,315,488,242,488" id="monroe" class="county-shape" href="#">
-                    <area shape="poly" coords="306,396,366,395,367,473,308,473,307,420,306,418" id="brown" class="county-shape" href="#">
-                    <area shape="poly" coords="370,396,452,395,450,450,427,451,427,468,420,470,413,476,370,476" id="bartholomew" class="county-shape" href="#">
-                    <area shape="poly" coords="466,366,534,366,535,414,480,451,453,450,455,394,466,394" id="decatur" class="county-shape" href="#">
-                    <area shape="poly" coords="59,516,119,516,122,514,144,515,144,521,141,524,140,531,133,528,133,532,124,537,119,537,119,546,115,549,118,557,111,570,119,585,120,612,109,618,95,610,69,615,65,622,56,616,54,623,46,622,43,635,32,634,14,645,12,631,35,621,30,611,42,599,40,588,45,579,61,574,67,546,60,537,56,526" id="knox" class="county-shape" href="#"> <!-- this is the worst thing ever -->
-                    <area shape="poly" coords="153,516,191,516,192,537,186,537,187,621,184,624,163,619,159,621,148,611,141,616,134,609,128,608,125,612,121,610,122,581,115,571,122,557,122,540,139,532" id="daviess" class="county-shape" href="#">
-                    <area shape="poly" coords="194,515,238,516,238,614,206,615,197,623,190,622,190,539,194,538" id="martin" class="county-shape" href="#">
-                    <area shape="poly" coords="241,491,325,492,325,550,323,558,318,558,319,570,241,571" id="lawrence" class="county-shape" href="#">
-                    <area shape="poly" coords="319,476,367,475,367,479,416,477,420,472,426,470,428,540,412,560,407,554,377,552,365,546,358,551,347,546,334,549,327,549,326,489,318,489" id="jackson" class="county-shape" href="#">
-                    <area shape="poly" coords="430,454,480,453,503,437,502,510,483,511,484,518,476,517,475,526,468,526,468,534,453,534,451,537,443,532,430,538" id="jennings" class="county-shape" href="#">
-                    <!-- that was a lot of typing-->
-                </map>
-
-                <script src="js/visualize.js"></script>
-            </div>
+            <div class="spacerMini"></div> <!-- prevents mapbox from getting cut off-->
         </div>
-        <div class="spacerMini"></div> <!-- prevents mapbox from getting cut off-->
     </div>
 </body>
 </html>

@@ -3,28 +3,55 @@
 // instantiate
 let countyData = {};
 
+// these correspond to elements in the HTML
+const yearSelect = document.getElementById('year-select');
+const typeSelect = document.getElementById('type-select');
+
+let currentYear = yearSelect.value;
+let currentType = typeSelect.value;
+// types: tor (tornado) , svr (severe thunderstorm) , ffw (flash flood warning)
+
 // load county data from JSON file
 // run async
 // TODO : Allow user to select year of data
 // TODO : support multiple warning types
-async function loadCountyData() {
+async function loadCountyData(year, type) {
     try {
-        // open file
-        const load = await fetch('data/counties.json');
+        // define path
+        const url = `data/${year}/counties-${type}.json`;
+
+        //load this path
+        const load = await fetch(url);
         
         // load data
         countyData = await load.json();
         
         //logging for my sake
         // TODO: remove logging before final
-        console.log("worked! ", countyData);
+        console.log(`Success Loaded data for ${year} (${type}):`, countyData);
     } catch (error) {
-        console.error("something blew up: ", error);
+        console.error(`something blew up in year ${year}: `, error);
+
+        countyData = {};
+
+        document.getElementById("hoverData").innerHTML = "ERROR Data not found for this selection.";
     }
 }
 
 // run immediately
-loadCountyData();
+loadCountyData(currentYear, currentType);
+
+// Listen for Year changes
+yearSelect.addEventListener('change', (e) => {
+    currentYear = e.target.value;
+    loadCountyData(currentYear, currentType);
+});
+
+// Listen for Warning Type changes
+typeSelect.addEventListener('change', (e) => {
+    currentType = e.target.value;
+    loadCountyData(currentYear, currentType);
+});
 
 function addData(countyId) {
     // if countyData[countyId] exists we will use it 
@@ -35,8 +62,16 @@ function addData(countyId) {
     // format name to look nice to the user
     const displayName = countyId.charAt(0).toUpperCase() + countyId.slice(1);
 
+    if (currentType == "tor") {
+        fancyType = "Tornado";
+    } else if (currentType == "svr") {
+        fancyType = "Severe Thunderstorm";
+    } else if (currentType == "ffw") {
+        fancyType = "Flash Flood";
+    }
+
     // update the element
-    document.getElementById("hoverData").innerHTML = `<br> ${displayName} County: ${count}`;
+    document.getElementById("hoverData").innerHTML = `<strong>${displayName} County</strong><br>${currentYear} ${fancyType} Warnings: <strong>${count}</strong>`;
 }
 
 // clear when user hovers off
@@ -59,3 +94,15 @@ allCounties.forEach(countyElement => {
     // mouse leave, so clear the field
     countyElement.addEventListener("mouseleave", () => clearField());
 });
+
+const yearSelectionElement = document.getElementById("year-selector");
+
+if (yearSelectionElement) {
+    yearSelectionElement.addEventListener('change', (event) => {
+        // Update the global currentYear variable
+        currentYear = event.target.value;
+        
+        // Reload the data with the new year
+        loadCountyData(currentYear, currentType);
+    });
+}
