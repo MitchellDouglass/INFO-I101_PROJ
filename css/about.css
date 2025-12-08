@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .backColor {
 	background: rgba(217, 217, 217, 0.4);
-	border-radius: 20%;
+	border-radius: 20px;
+	border: 2px solid black;
 }
 
 .spacer {
@@ -90,4 +91,8 @@ p {
 img {
 	padding: 20px;
 	border-radius: 20%;
+}
+
+.row {
+	padding: 20px;
 }
