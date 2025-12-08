@@ -10,7 +10,7 @@ let countyData = {};
 async function loadCountyData() {
     try {
         // open file
-        const load = await fetch('../data/counties.json');
+        const load = await fetch('/data/counties.json');
         
         // load data
         countyData = await load.json();
