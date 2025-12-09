@@ -8,46 +8,50 @@
 </head>
 	
 <body>
-	<ul>
-        <li> <a href="index.html">Home</a> </li>
-        <li> <a href="visualize.html">Map</a> </li>
-        <li> <a class="active" href="desc.html">Description</a> </li>
-        <li> <a href="about.html">About Us</a> </li>
-    </ul>
+    <div class="masterBg">
+	    <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="visualize.html">Map</a> </li>
+            <li> <a class="active" href="desc.html">Description</a> </li>
+            <li> <a href="about.html">About Us</a> </li>
+        </ul>
 
-    <div class="container">
-        <!-- setup for header and icons -->
-        <div class="row justify-content-between">
-            <div class="col-3">
-                <img src="assets/nws-logo.svg" width="60%" class="logoLeft">
+        <div class="container">
+            <!-- setup for header and icons -->
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <img src="assets/nws-logo.svg" width="60%" class="logoLeft">
+                </div>
+
+                <div class="col-6">
+                    <h1 class="headForm">About Our Information</h1>
+                </div>
+
+                <div class="col-3">
+                    <img src="assets/iem-logo.png" width="90%" class="logoRight">
+                </div>
             </div>
 
-            <div class="col-6">
-                <h1 class="headForm">About Our Information</h1>
+            <div class="spacer"></div>
+
+            <!-- Use a new p for each break in the text to keep it organized -->
+            <div class="row subBox" id="boxDesc">
+                <p>Our data came from a set of warning data provided from the National Weather Service, courtesy of the Iowa Environmental Mesonet (IEM) from Iowa State University. The two have been in a long-standing partnership.</p>
+            
+                <p>Our specific set of data comes from central Indiana’s dedicated National Weather Service forecast office, also known as a WFO. The Indianapolis WFO services the greater Indianapolis area, along with tens of surrounding counties in central Indiana. This office handles issuing warnings during, and before storm events.</p>
+            
+                <p>This sub-set of data contains 3 types of warnings: Tornado, Severe Thunderstorm, and Flash Flood from the years of 2002 to 2025.</p>
+            
+                <p>The reason we have picked this specific data is for residents of Indiana to have an easy, understandable, and accessible way to view the history of extreme and dangerous weather such as tornadoes, severe thunderstorms, and flash floods. This site can help with a clearer understanding of weather patterns, as understanding them can help residents more accurately prepare for such forecasts. If more people understand the risks certain weather can bring, they are more likely to prepare appropriately. The fear of the unknown is a daunting one, but with a better understanding of what certain weather can bring, people are more likely to act in a much calmer fashion.</p>
+            
+                <p>To get more personal, we find it fascinating to study this data set because studying the patterns of extreme weather, such as where certain events occur as well as their frequency can teach us not only how these events affect the environment around us physically, such as damage to infrastructure, but also as socially, economically, and mentally.  As much as we can view patterns and try to predict what will happen, an unexpected disaster can happen at any time, and with understanding this truth, it can help us as society relate to each other. </p>
+            
+                <p>Learning about such disasters can help us connect and better empathize with not only our community, but with the wider world around us. </p>
+
+                <h6 class="footerText">Sources used in writing: <a href="https://www.npr.org/2011/07/04/137526401/the-key-to-disaster-survival-friends-and-neighbors" target="_blank">Source 1</a> <a href="https://www.vice.com/en/article/why-we-re-fascinated-by-catastrophe/" target="_blank">Source 2</a> <a href="https://ourworldindata.org/the-world-has-become-more-resilient-to-disasters-but-investment-is-needed-to-save-more-lives" target="_blank">Source 3</a></h6>
+
+                <h3 class="footerText">To access the raw warning data (from IEM), <a href="https://mesonet.agron.iastate.edu/nws/list_tags.php?opt=bywfo&wfo=IND&year=2025" target="_blank">click here</a>.</h3>
             </div>
-
-            <div class="col-3">
-                <img src="assets/iem-logo.png" width="90%" class="logoRight">
-            </div>
-        </div>
-
-        <div class="spacer"></div>
-
-        <!-- Use a new p for each break in the text to keep it organized -->
-        <div class="row">
-            <p>Our data came from a set of warning data provided from the National Weather Service, courtesy of the Iowa Environmental Mesonet (IEM) from Iowa State University. The two have been in a long-standing partnership.</p>
-        
-            <p>Our specific set of data comes from central Indiana’s dedicated National Weather Service forecast office, also known as a WFO. The Indianapolis WFO services the greater Indianapolis area, along with tens of surrounding counties in central Indiana. This office handles issuing warnings during, and before storm events.</p>
-        
-            <p>This sub-set of data contains 3 types of warnings: Tornado, Severe Thunderstorm, and Flash Flood from the years of 2002 to 2025.</p>
-        
-            <p>The reason we have picked this specific data is for residents of Indiana to have an easy, understandable, and accessible way to view the history of extreme and dangerous weather such as tornadoes, severe thunderstorms, and flash floods. This site can help with a more clear understanding of weather patterns, as understanding them can help residents more accurately prepare for such forecasts. If more people understand the risks certain weather can bring, they are more likely to prepare appropriately. The fear of the unknown is a daunting one, but with a better understanding of what certain weather can bring, people are more likely to act in a much calmer fashion.</p>
-        
-            <p>We find it interesting to study this data set because it is interesting to study patterns of extreme weather, such as where certain events occur, as well as their frequency. It is also interesting to learn not just how these events affect the environment around us physically, such as damages to infrastructure, but as well as socially, economically, and mentally.</p>
-        
-            <p>Learning about such disasters can help us connect and better empathize with not only our community but the wider world around us.</p>
-
-            <h4 class="footerText">To access the raw data, <a href="https://mesonet.agron.iastate.edu/nws/list_tags.php?opt=bywfo&wfo=IND&year=2025" target="_blank">click here</a>.</h4>
         </div>
     </div>
 
