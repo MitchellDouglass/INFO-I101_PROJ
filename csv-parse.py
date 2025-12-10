@@ -54,4 +54,4 @@ def process_csv_file(input_csv, output_json):
         print(f"something else blew up: {e}")
 
 # run function when script runs
-process_csv_file('warnings.csv', 'counties.json')
+process_csv_file('warning-tags.csv', 'counties.json')
