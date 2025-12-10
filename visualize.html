@@ -22,8 +22,10 @@
             <!-- center all the content horizontally but still allow some space -->
             <div class="row justify-content-around">
                 <!-- force this box into the center vertically -->
-                <div class="col-4 align-self-center subBox" id="boxSettings">
-                    <p>settings go in this box</p>
+                <div class="col-2 align-self-center subBox" id="boxSettings">
+                    <h5 class="boxFont">Data Display Settings</h5>
+
+                    <div class="spacerMini"></div>
                 
                     <!-- form selector for year -->
                     <label for="year-select" class="form-label">Select Year:</label>
@@ -34,14 +36,18 @@
                     </select>
                 
                     <!-- form selector for warning type -->
-                    <label for="type-select" class="form-label">Warning Type:</label>
+                    <label for="type-select" class="form-label">Select Warning Type:</label>
                     <select id="type-select" class="form-select mb-3">
                         <option value="tor" selected>Tornado</option>
                         <option value="svr">Severe Thunderstorm</option>
                         <option value="ffw">Flash Flood</option>
                     </select>
+                </div>
                 
-                    <p id="hoverData"></p>
+                <div class="col-2 align-self-center subBox" id="boxData">
+                    <img src="" width="80px" id="typeDisplay" class="imgDisplay">
+
+                    <p class="dataText" id="hoverData">Hover over a county to view warning data!</p>
                 </div>
             
                 <div class="col-8 subBox" id="boxVis">

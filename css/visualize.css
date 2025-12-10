@@ -36,13 +36,22 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: Arial;
 }
 
+.boxFont {
+    font-weight: bold;
+    text-align: center;
+}
+
+.dataText {
+    text-align: center;
+}
+
 .spacer {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
 .spacerMini {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
 }
 
@@ -60,5 +69,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 #boxSettings {
     width: 275px;
-    height: 350px;
+    height: 265px;
+}
+
+#boxData {
+    width: 275px;
+    height: 225px;
+}
+
+.imgDisplay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
 }

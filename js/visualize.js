@@ -25,6 +25,9 @@ async function loadCountyData(year, type) {
         
         // load data
         countyData = await load.json();
+
+        // run this when we do loadCountyData so an icon is always visible
+        changeImg(type);
         
         //logging for my sake
         // TODO: remove logging before final
@@ -53,6 +56,11 @@ typeSelect.addEventListener('change', (e) => {
     loadCountyData(currentYear, currentType);
 });
 
+// change the image displayed in the data box
+function changeImg(type) {
+    document.getElementById("typeDisplay").src = `assets\/${type}-graphic.svg`; // have to use a stupid escape
+}
+
 function addData(countyId) {
     // if countyData[countyId] exists we will use it 
     // if it returns undefined (not present in JSON file) we will set it to 0
@@ -62,6 +70,7 @@ function addData(countyId) {
     // format name to look nice to the user
     const displayName = countyId.charAt(0).toUpperCase() + countyId.slice(1);
 
+    // so it doesn't look bad
     if (currentType == "tor") {
         fancyType = "Tornado";
     } else if (currentType == "svr") {
@@ -71,12 +80,12 @@ function addData(countyId) {
     }
 
     // update the element
-    document.getElementById("hoverData").innerHTML = `<strong>${displayName} County</strong><br>${currentYear} ${fancyType} Warnings: <strong>${count}</strong>`;
+    document.getElementById("hoverData").innerHTML = `<h5><strong>${displayName} County</strong></h5>${currentYear} ${fancyType} Warnings: <strong>${count}</strong>`;
 }
 
 // clear when user hovers off
 function clearField() {
-    document.getElementById("hoverData").innerHTML = "";
+    document.getElementById("hoverData").innerHTML = "Hover over a county to view warning data!";
 }
 
 // loop through all elements with county-shape class instead of manually adding
