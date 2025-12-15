@@ -1,4 +1,4 @@
-/* CSS file for index.html page */
+/* CSS file for visualize.html page */
 ul {
     list-style-type: none;
     margin: 0;
@@ -6,12 +6,13 @@ ul {
     background-color: #b7c8d9;
     display: flex;
     justify-content: center;
+    border-bottom: 4px solid #0c2232;
 }
 
 ul li a {
     display: block;
     color: #0c2232;
-    padding: 14px 50px;
+    padding: 1em 3em;
     text-decoration: none;
 }
 
@@ -25,11 +26,31 @@ ul li a.active {
     background-color: #0c2232;
 }
 
+/* define link setup */
+a:link {
+    color: #0c2232;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #0c2232;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d1e2f3;
+    font-weight: bold;
+}
+
+.navText {
+    font-size: 150%
+}
+
 .masterBg {
     background-image: url("../assets/cloud-bg.jpg"); /* This path must be in relation to the CSS file NOT the HTML file! */
     background-position: center;
     background-size: cover;
-    height: 52em;
+    min-height: 100vh; /* background will always be 100% of the viewport height */
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -63,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #boxVis {
-    width: 725px;
+    width: 690px;
     height: 700px;
 }
 

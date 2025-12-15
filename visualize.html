@@ -10,10 +10,10 @@
 <body>
     <div class="masterBg">
 	    <ul>
-            <li> <a href="index.html">Home</a> </li>
-            <li> <a class="active" href="visualize.html">Map</a> </li>
-            <li> <a href="desc.html">Description</a> </li>
-            <li> <a href="about.html">About Us</a> </li>
+            <li> <a class="navText" href="index.html">Home</a> </li>
+            <li> <a class="active navText" href="visualize.html">Map</a> </li>
+            <li> <a class="navText" href="desc.html">Description</a> </li>
+            <li> <a class="navText" href="about.html">About Us</a> </li>
         </ul>
         
         <div class="spacer"></div>
@@ -22,35 +22,35 @@
             <!-- center all the content horizontally but still allow some space -->
             <div class="row justify-content-around">
                 <!-- force this box into the center vertically -->
-                <div class="col-2 align-self-center subBox" id="boxSettings">
-                    <h5 class="boxFont">Data Display Settings</h5>
+                <div class="col-3 d-flex flex-column align-self-center">
+                    
+                    <div class="subBox mb-4 w-100" id="boxData">
+                        <img src="" width="80px" id="typeDisplay" class="imgDisplay">
+                        <p class="dataText" id="hoverData">Hover over a county to view warning data!</p>
+                    </div>
 
-                    <div class="spacerMini"></div>
-                
-                    <!-- form selector for year -->
-                    <label for="year-select" class="form-label">Select Year:</label>
-                    <select id="year-select" class="form-select mb-3">
-                        <option value="2025" selected>2025</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                    </select>
-                
-                    <!-- form selector for warning type -->
-                    <label for="type-select" class="form-label">Select Warning Type:</label>
-                    <select id="type-select" class="form-select mb-3">
-                        <option value="tor" selected>Tornado</option>
-                        <option value="svr">Severe Thunderstorm</option>
-                        <option value="ffw">Flash Flood</option>
-                    </select>
-                </div>
-                
-                <div class="col-2 align-self-center subBox" id="boxData">
-                    <img src="" width="80px" id="typeDisplay" class="imgDisplay">
+                    <div class="subBox w-100" id="boxSettings">
+                        <h5 class="boxFont">Data Display Settings</h5>
 
-                    <p class="dataText" id="hoverData">Hover over a county to view warning data!</p>
+                        <div class="spacerMini"></div>
+                    
+                        <label for="year-select" class="form-label">Select Year:</label>
+                        <select id="year-select" class="form-select mb-3">
+                            <option value="2025" selected>2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    
+                        <label for="type-select" class="form-label">Select Warning Type:</label>
+                        <select id="type-select" class="form-select mb-3">
+                            <option value="tor" selected>Tornado</option>
+                            <option value="svr">Severe Thunderstorm</option>
+                            <option value="ffw">Flash Flood</option>
+                        </select>
+                    </div>
                 </div>
             
-                <div class="col-8 subBox" id="boxVis">
+                <div class="col-9 subBox" id="boxVis">
                     <img src="assets/ind_map.png" width="650px" height="650px" usemap="#master_map">
                     <map name="master_map">
                         <!-- left to right organizational structure -->
