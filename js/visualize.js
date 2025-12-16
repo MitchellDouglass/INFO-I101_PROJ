@@ -74,13 +74,13 @@ function addData(countyId) {
     if (currentType == "tor") {
         fancyType = "Tornado";
     } else if (currentType == "svr") {
-        fancyType = "Severe Thunderstorm";
+        fancyType = "Severe T-storm";
     } else if (currentType == "ffw") {
         fancyType = "Flash Flood";
     }
 
     // update the element
-    document.getElementById("hoverData").innerHTML = `<h5><strong>${displayName} County</strong></h5>${currentYear} ${fancyType} Warnings: <strong>${count}</strong>`;
+    document.getElementById("hoverData").innerHTML = `<h5><strong>${displayName} County</strong></h5>${currentYear} ${fancyType} Warnings: <h1><strong>${count}</strong></h1>`;
 }
 
 // clear when user hovers off
